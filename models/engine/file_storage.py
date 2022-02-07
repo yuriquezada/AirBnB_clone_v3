@@ -74,10 +74,12 @@ class FileStorage:
         Devuelve el objeto según el nombre de la clase y su ID,
         o Ninguno si no fundar
         """
-        key = "{}.{}".format(cls, id)
-        if key in self.__objects.key():
-            return self.__objects[key]
-        return None
+        if cls and id:
+            for key, value in self.__objects.items():
+                if cls == value.__class__ and value.id == id:
+                    return value
+        else:
+            return None
 
     def count(self, cls=None):
         """
@@ -85,10 +87,14 @@ class FileStorage:
         de clase dado. Si no se pasa ningún nombre, devuelve el recuento de
         todos los objetos almacenados
         """
+        __count = 0
+
         if cls:
-            counter = 0
-            for obj in self.__objects.values():
-                if obj.__class__.__name__ == cls:
-                    counter += 1
-            return counter
-        return len(self.__objects)
+            for key, value in self.__objects.items():
+                if cls == value.__class__:
+                    __count = __count + 1
+        else:
+            for key, value in self.__objects.items():
+                __count = __count + 1
+
+        return(__count)
