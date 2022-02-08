@@ -180,7 +180,9 @@ No known bugs at this time.
 ## Authors
 Alexa Orrico - [Github](https://github.com/alexaorrico) / [Twitter](https://twitter.com/alexa_orrico)  
 Jennifer Huang - [Github](https://github.com/jhuang10123) / [Twitter](https://twitter.com/earthtojhuang)
+
 Yuri Quezada - [Github](https://github.com/yuriquezada) / [LinkedIn](https://www.linkedin.com/in/yuriquezada/)
+
 Geraldine Meneses - [Github](https://github.com/nitaly31) / [LinkedIn](https://www.linkedin.com/in/geraldine-meneses/)
 
 Second part of Airbnb: Joann Vuong
